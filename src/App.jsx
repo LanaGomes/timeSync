@@ -10,9 +10,6 @@ function App() {
   return (
     <>
       <NavBar />
-      <MainMessage />
-      <StopWatch />
-      <Buttons />
     </>
   );
 }
