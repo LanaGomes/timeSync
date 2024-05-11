@@ -4,9 +4,12 @@ export default {
   theme: {
     colors: {
       magenta: "#DA6E7B",
+      red: "#A73443",
       blue: "#708FDF",
+      darkBlue: "#2D529F",
       purple: "#7B35B1",
       reallyWhite: "#ffff",
+
       white: "#EFEFEF",
       grey: {
         1: "#C2C2C2",
