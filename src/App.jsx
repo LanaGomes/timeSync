@@ -8,7 +8,7 @@ import Buttons from "./components/Buttons";
 
 function App() {
   return (
-    <div className="bg-white  ">
+    <div className="bg-reallywhite  ">
       <NavBar />
 
       <div className="">
