@@ -6,6 +6,7 @@ export default {
       magenta: "#DA6E7B",
       blue: "#708FDF",
       purple: "#7B35B1",
+      reallyWhite: "#ffff",
       white: "#EFEFEF",
       grey: {
         1: "#C2C2C2",
@@ -14,7 +15,11 @@ export default {
         4: "#121212",
       },
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        teste: "url(./src/Images/circle3.png)",
+      },
+    },
   },
   plugins: [],
 };
