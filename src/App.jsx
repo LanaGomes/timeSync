@@ -8,9 +8,15 @@ import Buttons from "./components/Buttons";
 
 function App() {
   return (
-    <>
+    <div className="bg-white  ">
       <NavBar />
-    </>
+
+      <div className="">
+        <MainMessage />
+        <StopWatch />
+        <Buttons />
+      </div>
+    </div>
   );
 }
 
