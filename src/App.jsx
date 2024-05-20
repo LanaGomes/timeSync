@@ -10,12 +10,10 @@ function App() {
   return (
     <div className="bg-reallywhite  ">
       <NavBar />
-
-      <div className="">
-        <MainMessage />
-        <StopWatch />
-        <Buttons />
-      </div>
+      <MainMessage />
+      <StopWatch />
+      <Buttons />
+      <div className=""></div>
     </div>
   );
 }
