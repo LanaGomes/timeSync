@@ -20,7 +20,8 @@ export default {
     },
     extend: {
       backgroundImage: {
-        teste: "url(./src/Images/circle3.png)",
+        circleRed: "url(./src/Images/circleRed.png)",
+        circleBlue: "url(./src/Images/circleBlue.png)",
       },
     },
   },
