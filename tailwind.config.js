@@ -22,6 +22,7 @@ export default {
       backgroundImage: {
         circleRed: "url(./src/Images/circleRed.png)",
         circleBlue: "url(./src/Images/circleBlue.png)",
+        circlePurple: "url(./src/Images/circlePurple.png)",
       },
     },
   },

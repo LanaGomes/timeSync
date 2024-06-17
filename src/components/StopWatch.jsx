@@ -59,9 +59,19 @@ function StopWatch() {
     }
   };
 
+  const getClassName = () => {
+    if (mode === "rest") {
+      return "flex flex-col justify-center items-center bg-circleBlue bg-cover bg-no-repeat bg-center h-60 w-60 my-10 sm:h-80 sm:w-80 sm:my-4  static z-1 drop-shadow-md>";
+    } else if (mode === "focus") {
+      return "flex flex-col justify-center items-center bg-circleRed bg-cover bg-no-repeat bg-center h-60 w-60 my-10 sm:h-80 sm:w-80 sm:my-4  static z-1 drop-shadow-md>";
+    } else {
+      return "flex flex-col justify-center items-center bg-circlePurple bg-cover bg-no-repeat bg-center h-60 w-60 my-10 sm:h-80 sm:w-80 sm:my-4  static z-1 drop-shadow-md>";
+    }
+  };
+
   return (
     <div className="flex flex-col justify-center items-center">
-      <div className=" flex flex-col justify-center items-center bg-cover bg-no-repeat bg-center h-60 w-60 my-10 sm:h-80 sm:w-80 sm:my-4  static z-1 drop-shadow-md">
+      <div className={getClassName()}>
         <h1 className="bg-gradient-to-r from-white via-grey-1 to-white text-4xl sm:text-6xl py-8 px-24 sm:px-28  rounded-full relative  z-10 drop-shadow-md ">
           {`${sign}${hours.toString().padStart(2, "0")}:${minutes
             .toString()
