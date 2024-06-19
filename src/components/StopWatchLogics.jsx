@@ -4,14 +4,21 @@ import Buttons from "./Buttons";
 import { useState, useEffect } from "react";
 
 function StopWatchLogics({}) {
+  // Recuperar o tempo salvo no Local Storage
+  const savedTime = localStorage.getItem("time")
+    ? parseInt(localStorage.getItem("time"))
+    : 0;
+  const savedMode = localStorage.getItem("mode") || null;
+  const savedItsRunning = localStorage.getItem("itsRunning") === "true";
+
   //store my time
-  const [time, setTime] = useState(0);
+  const [time, setTime] = useState(savedTime);
 
   //time is running?
-  const [itsRunning, setItsRunning] = useState(false);
+  const [itsRunning, setItsRunning] = useState(savedItsRunning);
 
   //mode
-  let [mode, setMode] = useState(null);
+  let [mode, setMode] = useState(savedMode);
 
   //dealing with negative time
   const absolutetime = Math.abs(time);
@@ -34,6 +41,7 @@ function StopWatchLogics({}) {
       myInterval = setInterval(() => {
         setTime((prevTime) => {
           const newTime = prevTime + (mode === "focus" ? 1 : -1);
+          localStorage.setItem("time", newTime);
           return newTime;
         });
       }, 10);
@@ -41,6 +49,11 @@ function StopWatchLogics({}) {
 
     return () => clearInterval(myInterval);
   }, [itsRunning, mode]);
+
+  useEffect(() => {
+    localStorage.setItem("mode", mode);
+    localStorage.setItem("itsRunning", itsRunning);
+  }, [mode, itsRunning]);
 
   let focusTimeClickHandler = () => {
     if (mode === "focus") {
@@ -50,6 +63,12 @@ function StopWatchLogics({}) {
       setItsRunning(true);
     }
   };
+
+  useEffect(() => {
+    document.title = `${sign}${hours.toString().padStart(2, "0")}:${minutes
+      .toString()
+      .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+  }, [time]);
 
   const restTimeClickHandler = () => {
     if (mode === "rest") {
@@ -62,7 +81,14 @@ function StopWatchLogics({}) {
 
   return (
     <>
-      <MainMessage mode={mode} />
+      <MainMessage
+        mode={mode}
+        sign={sign}
+        minutes={minutes}
+        seconds={seconds}
+        hours={hours}
+        time={time}
+      />
       <StopWatch
         mode={mode}
         sign={sign}
