@@ -4,12 +4,12 @@ import "./App.css";
 
 import MainMessage from "./components/MainMessage";
 import StopWatch from "./components/StopWatch";
+import StopWatchLogics from "./components/StopWatchLogics";
 
 function App() {
   return (
     <div className="bg-reallywhite  ">
-      <MainMessage />
-      <StopWatch />
+      <StopWatchLogics />
 
       <div className=""></div>
     </div>

@@ -1,13 +1,22 @@
 import { useState } from "react";
 
-function MainMessage() {
-  const [message, setMessage] = useState(true);
-
+function MainMessage({ mode }) {
+  const getClassNameMainMessage = () => {
+    if (mode === "rest") {
+      return "bg-blue p-6 text-xl flex-1 text-center  sm:p-4 sm:text-1xl lg:text-3xl lg:p-8 text-white";
+    } else if (mode === "focus") {
+      return "bg-red p-6 text-xl flex-1 text-center sm:p-4 sm:text-1xl lg:text-3xl lg:p-8  text-white";
+    } else {
+      return "bg-purple p-6 text-xl flex-1 text-center sm:p-4 sm:text-1xl lg:text-3xl lg:p-8  text-white";
+    }
+  };
   return (
     <div>
-      <main className="bg-grey-1  text-xl flex-1 text-center sm:p-4 sm:text-1xl lg:text-2xl lg:p-4">
-        <h2 className="font-bold">Hora de Relaxar!</h2>
-        <p>Você tem 1 hora para descansar</p>
+      <main className={getClassNameMainMessage()}>
+        <h2 className="px-10 font-semibold">
+          {mode == "rest" ? "Hora de Relaxar" : "Vamos focar!"}
+        </h2>
+        <p>{}</p>
       </main>
     </div>
   );
