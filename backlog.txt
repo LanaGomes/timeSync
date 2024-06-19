@@ -1,9 +1,12 @@
 - acertar botoes ok
 - mudar cor da bola conforme descanso / foco ok
+- atualizar mainmessage (mensagem e cor) ok
 
-- atualizar mainmessage (mensagem e cor)
-- local storage
--consertar o bug do navegador (pesquisar foco do navegador) 
 
-09439117702
+- local storage 
+- consertar o bug do navegador (pesquisar foco do  navegador) 
+
+- puxar frase motivacional API
+- colocar tempo no title
+
 
