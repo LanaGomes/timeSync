@@ -4,7 +4,7 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="bg-white  ">
+    <div className="bg-white">
       <StopWatchLogics />
     </div>
   );
