@@ -26,7 +26,7 @@ const MotivationalSentences = () => {
 
         if (!response.ok) {
           throw new Error(
-            '"Cada erro em sua requisição é uma oportunidade de aprendizado e crescimento. Persevere e transforme obstáculos em degraus para o sucesso"'
+            '"Cada erro em sua requisição é uma oportunidade de aprendizado e crescimento.Persevere e transforme obstáculos em degraus para o sucesso"'
           );
         }
 
@@ -44,21 +44,21 @@ const MotivationalSentences = () => {
     fetchQuote();
   }, []);
 
-  if (loading) {
+  if (!loading) {
     return (
-      <div>
-        <img src={loadingImg}></img>
-        <p>Carregando...</p>
+      <div className="flex  flex-col justify-center items-center my-6 mx-12 text-lg text-center text-grey-2 italic ">
+        <img className="my-2 h-8" src={loadingImg}></img>
+        <p>Carregando frase do dia...</p>
       </div>
     );
   }
 
   if (error) {
     return (
-      <div className="flex justify-center items-center my-6 mx-12 text-xs sm:text-base md:my-10 md:mx-36 gap-5 italic">
+      <div className="flex justify-center items-center my-6 mx-12 text-xs text-left text-grey-2 sm:text-base md:my-10 md:mx-36 gap-5 italic">
         {" "}
         <img
-          className=" flex justify-center items-center h-10 w-10"
+          className=" flex justify-center  items-center h-10 w-10"
           src={errorImg}
         ></img>{" "}
         Erro: {error}
@@ -67,7 +67,7 @@ const MotivationalSentences = () => {
   }
 
   return (
-    <div className="flex my-10 mx-36 gap-5 italic">
+    <div className="flex text-grey-2 text-center my-10 mx-36 gap-5 italic">
       <blockquote>
         <q>{quote}</q>{" "}
       </blockquote>
