@@ -44,7 +44,7 @@ const MotivationalSentences = () => {
     fetchQuote();
   }, []);
 
-  if (!loading) {
+  if (loading) {
     return (
       <div className="flex  flex-col justify-center items-center my-6 mx-12 text-lg text-center text-grey-2 italic ">
         <img className="my-2 h-8" src={loadingImg}></img>
