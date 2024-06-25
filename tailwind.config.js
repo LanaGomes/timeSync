@@ -20,9 +20,9 @@ export default {
     },
     extend: {
       backgroundImage: {
-        circleRed: "url(./public/Images/circleRed.png)",
-        circleBlue: "url(./public/Images/circleBlue.png)",
-        circlePurple: "url(./public/Images/circlePurple.png)",
+        circleRed: "url(/Images/circleRed.png)",
+        circleBlue: "url(/Images/circleBlue.png)",
+        circlePurple: "url(/Images/circlePurple.png)",
       },
     },
   },
