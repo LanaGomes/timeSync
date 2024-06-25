@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import errorImg from "./../Images/icons8-erro.gif";
-import loadingImg from "./../Images/loadingImg.gif";
+import errorImg from "./../../public/Images/icons8-erro.gif";
+import loadingImg from "./../../public/Images/loadingImg.gif";
 
 const MotivationalSentences = () => {
   const [quote, setQuote] = useState("");
