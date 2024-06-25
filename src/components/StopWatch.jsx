@@ -1,5 +1,3 @@
-import Buttons from "./Buttons";
-
 function StopWatch({ mode, sign, hours, minutes, seconds }) {
   const getClassName = () => {
     if (mode === "rest") {
