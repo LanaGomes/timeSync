@@ -3,11 +3,11 @@ import { useState } from "react";
 function MainMessage({ mode, sign, time, hours, minutes, seconds }) {
   const getClassNameMainMessage = () => {
     if (mode === "rest") {
-      return "bg-blue p-6 text-xl flex-1 text-center sm:text-1xl lg:text-3xl lg:p-8 text-white";
+      return "bg-blue p-4 text-xl flex-1 text-center sm:text-1xl lg:text-3xl lg:p-8 text-white";
     } else if (mode === "focus") {
-      return "bg-red p-6 text-xl flex-1 text-center sm:text-1xl lg:text-3xl lg:p-8  text-white";
+      return "bg-red p-4 text-xl flex-1 text-center sm:text-1xl lg:text-3xl lg:p-8  text-white";
     } else {
-      return "bg-purple p-6 text-xl flex-1 text-center sm:text-1xl lg:text-3xl lg:p-8  text-white";
+      return "bg-purple p-4 text-xl flex-1 text-center sm:text-1xl lg:text-3xl lg:p-8  text-white";
     }
   };
   const timeBalance = () => {
