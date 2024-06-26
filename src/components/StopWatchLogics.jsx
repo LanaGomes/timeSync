@@ -33,6 +33,12 @@ function StopWatchLogics({}) {
   // Seconds calculation
   const seconds = Math.floor((absolutetime % 6000) / 100);
 
+  let clearTime = () => {
+    setTime(null);
+    setMode(null);
+    setItsRunning(false);
+  };
+
   //set interval to count the seconds function
   useEffect(() => {
     let myInterval;
@@ -101,6 +107,7 @@ function StopWatchLogics({}) {
         focusTimeClickHandler={focusTimeClickHandler}
         mode={mode}
         itsRunning={itsRunning}
+        clearTime={clearTime}
       />
     </>
   );
