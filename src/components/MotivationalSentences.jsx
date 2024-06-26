@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import errorImg from "./../../public/Images/icons8-erro.gif";
 import loadingImg from "./../../public/Images/loadingImg.gif";
-import { createLogger } from "vite";
 
 const MotivationalSentences = () => {
   const [quote, setQuote] = useState(null);
