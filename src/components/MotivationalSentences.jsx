@@ -10,6 +10,7 @@ const MotivationalSentences = () => {
   const fetchQuote = async () => {
     const url = "https://quotes85.p.rapidapi.com/keyword?word=focus";
     console.log(import.meta.env.VITE_RAPIDAPI_KEY);
+    console.log("maoe");
     const options = {
       method: "GET",
       headers: {
