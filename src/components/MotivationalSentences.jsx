@@ -13,7 +13,7 @@ const MotivationalSentences = () => {
     try {
       apiKey = process.env.RAPIDAPI_KEY;
     } catch (e) {
-      Log;
+      console.log(e);
       apiKey = import.meta.env.VITE_RAPIDAPI_KEY;
     }
     console.log(import.meta.env.VITE_RAPIDAPI_KEY);

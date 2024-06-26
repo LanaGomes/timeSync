@@ -1,11 +1,12 @@
-import { defineConfig } from "vite";
+import { defineConfig, loadEnv } from "vite";
 import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  base: process.env.PUBLIC_URL,
-  define: {
-    __RAPIDAPI_KEY__: process.env.VITE_RAPIDAPI_KEY,
-  },
+export default defineConfig(({ command, mode }) => {
+  const env = loadEnv(mode, process.cwd(), "");
+  console.log(env);
+  return {
+    plugins: [react()],
+    base: env.PUBLIC_URL,
+  };
 });
