@@ -8,7 +8,8 @@ const MotivationalSentences = () => {
   const [error, setError] = useState(null);
 
   const fetchQuote = async () => {
-    const url = "https://quotes85.p.rapidapi.com/keyword?word=success";
+    const url = "https://quotes85.p.rapidapi.com/keyword?word=focus";
+    console.log(import.meta.env.VITE_RAPIDAPI_KEY);
     const options = {
       method: "GET",
       headers: {
