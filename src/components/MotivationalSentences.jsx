@@ -9,8 +9,7 @@ const MotivationalSentences = () => {
 
   const fetchQuote = async () => {
     let apiKey = process.env.RAPIDAPI_KEY;
-    const url =
-      "https://quotes85.p.rapidapi.com/keyword?word=focus&apiKey=" + apiKey;
+    const url = "https://quotes85.p.rapidapi.com/keyword?word=focus";
     const options = {
       method: "GET",
       headers: {
