@@ -12,8 +12,6 @@ const MotivationalSentences = () => {
     let apiKey = process.env.RAPIDAPI_KEY;
     const url =
       "https://quotes85.p.rapidapi.com/keyword?word=focus&apiKey=" + apiKey;
-    const logger = createLogger("info");
-    logger.info(apiKey);
     const options = {
       method: "GET",
       headers: {
