@@ -13,7 +13,7 @@ const MotivationalSentences = () => {
     try {
       apiKey = process.env.RAPIDAPI_KEY;
     } catch (e) {
-      console.log(e);
+      Log;
       apiKey = import.meta.env.VITE_RAPIDAPI_KEY;
     }
     console.log(import.meta.env.VITE_RAPIDAPI_KEY);
@@ -21,7 +21,7 @@ const MotivationalSentences = () => {
     const options = {
       method: "GET",
       headers: {
-        "x-rapidapi-key": import.meta.env.VITE_RAPIDAPI_KEY,
+        "x-rapidapi-key": apiKey,
         "x-rapidapi-host": "quotes85.p.rapidapi.com",
       },
     };
