@@ -6,10 +6,14 @@ export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
   return {
     plugins: [react()],
-    base: env.PUBLIC_URL,
+    base: "./",
     define: {
       "process.env": env,
       RAPIDAPI_KEY: process.env.RAPIDAPI_KEY,
+    },
+    server: {
+      host: "127.0.0.1",
+      port: 5173,
     },
   };
 });
