@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import errorImg from "./../../public/Images/icons8-erro.gif";
 import loadingImg from "./../../public/Images/loadingImg.gif";
+import { createLogger } from "vite";
 
 const MotivationalSentences = () => {
   const [quote, setQuote] = useState(null);
@@ -11,8 +12,8 @@ const MotivationalSentences = () => {
     let apiKey = process.env.RAPIDAPI_KEY;
     const url =
       "https://quotes85.p.rapidapi.com/keyword?word=focus&apiKey=" + apiKey;
-    console.log(apiKey);
-
+    const logger = createLogger("info");
+    logger.info(apiKey);
     const options = {
       method: "GET",
       headers: {
